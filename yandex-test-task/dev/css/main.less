@@ -1,0 +1,187 @@
+/* author = taksenov@gmail.com */
+/* MainSettings */
+@import "mixins";
+@import "fonts";
+@import "button";
+@import "rating";
+
+@container-width : 940px;
+@footer-height   : 290px;
+@body-font       : "MyriadPro-Regular";
+
+.container {
+    width: @container-width;
+    margin: 0 auto;
+    position: relative;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: @container-width + 20px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        margin-top: 10px;
+        padding: 0;
+        left: 0;
+        list-style: none outside none;
+    }
+}
+p {
+    padding: 0;
+    margin-top: 20px;
+}
+br {
+    margin-bottom: 30px;
+}
+*{
+    font-family: "MyriadPro-Regular";
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    background: url("../../static/img/common/bg.png") #ffffff;
+}
+/* ------------------------------------------- */
+
+/* Maincontent */
+.maincontent {
+    padding-top: 50px;
+}
+/* ------------------------------------------- */
+
+/* Divider */
+.divider {
+    margin: 15px auto 0;
+    background-color: #d2d0d0;
+    width: @container-width;
+    height: 1px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+/* ------------------------------------------- */
+
+/* -------= Кнопки =------- */
+
+/* Модификации кнопки */
+.button_original {
+    .button-original (80px, 18px, none);
+}
+//-----------------
+.button_long {
+    .button-original (220px, 18px, none);
+}
+.button_long_high {
+    .button-original (220px, 64px, none);
+}
+//-----------------
+.button_search {
+    .button-original(100px, 30px, url('../../static/img/icons/icon-search.png'));
+}
+.button_bitcoin {
+    .button-original(110px, 34px, url('../../static/img/icons/icon-bitcoin.png'));
+}
+.button_delete {
+    .button-original(120px, 38px, url('../../static/img/icons/icon-trash.png'));
+}
+.button_rouble {
+    .button-original(130px, 42px, url('../../static/img/icons/icon-rouble.png'));
+}
+.button_dollar {
+    .button-original(140px, 46px, url('../../static/img/icons/icon-dollar.png'));
+}
+//Кнопки со шрифтом вместо иконок
+.button_search__ {
+    .button-original(140px, 46px, 'B');
+}
+.button_bitcoin__ {
+    .button-original(130px, 42px, 'C');
+}
+.button_delete__ {
+    .button-original(120px, 38px, 'A');
+}
+.button_rouble__ {
+    .button-original(110px, 34px, 'E');
+}
+.button_dollar__ {
+    .button-original(100px, 30px, 'D');
+}
+
+/* Модификации кнопки */
+/* -------= Кнопки =------- */
+
+/* -------= звезды рейтинга =------- */
+
+// модификации рейтинга
+.all-stars-orange {
+    .all-stars-original (
+            @img:           url(../../static/img/common/orange_stars.png),
+            @imgHeight:     34px,
+            @imgWidth:      88px,
+            @starSize:      16px,
+            @betweenStars:  2px
+           )
+}
+.all-stars-green {
+    .all-stars-original (
+            @img:           url(../../static/img/common/green_stars.png),
+            @imgHeight:     34px,
+            @imgWidth:      88px,
+            @starSize:      16px,
+            @betweenStars:  2px
+           )
+}
+.all-stars-blue {
+    .all-stars-original (
+            @img:           url(../../static/img/common/blue_stars.png),
+            @imgHeight:     34px,
+            @imgWidth:      88px,
+            @starSize:      16px,
+            @betweenStars:  2px
+           )
+}
+.all-stars-violet {
+    .all-stars-original (
+            @img:           url(../../static/img/common/violet_stars.png),
+            @imgHeight:     34px,
+            @imgWidth:      88px,
+            @starSize:      16px,
+            @betweenStars:  2px
+           )
+}
+.all-stars-terracotta {
+    .all-stars-original (
+            @img:           url(../../static/img/common/terracotta_stars.png),
+            @imgHeight:     34px,
+            @imgWidth:      88px,
+            @starSize:      16px,
+            @betweenStars:  2px
+           )
+}
+.all-stars-big-violet {
+    .all-stars-original (
+            @img:           url(../../static/img/common/big_violet_stars.png),
+            @imgHeight:     68px,
+            @imgWidth:      176px,
+            @starSize:      32px,
+            @betweenStars:  4px
+           )
+}
+/* -------= звезды рейтинга =------- */
+
+
+
+
+
+
+
+
+
+
+
