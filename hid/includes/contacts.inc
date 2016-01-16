@@ -32,7 +32,7 @@
 
             <div class="form__inner">
                 <div class="form__item">
-                    <input type="text" class="field" placeholder="Name" name="name" required>
+                    <input type="text" class="field" placeholder="NAME" name="name" required>
                 </div>
                 <div class="form__item">
                     <input type="tel" class="field" placeholder="TELEPHONE" name="phone">

@@ -12,16 +12,16 @@
             <p>And no&nbsp;damage is&nbsp;ever done to&nbsp;the environment (Mining natural diamonds often causes damage to&nbsp;the local environment so&nbsp;great that people can no&nbsp;longer liver there).</p>
             <p>Our consultants have all experienced tragic and difficult losses in&nbsp;their lives&nbsp;&mdash; just like you. Our kindness, compassion, and empathy shines through in&nbsp;every interaction. When possible, we’re&nbsp;happy to&nbsp;show you diamonds in&nbsp;person, and even deliver them ourselves straight to&nbsp;your door.even deliver them ourselves straight to&nbsp;your door.</p>
         </div>
-        <a href="http://www.heart-in-diamond.com/index.php" class="button about__button">More about Heart in diamond</a>
+        <a href="http://www.heart-in-diamond.com/index.php" class="button about__button" target="_blank">More about Heart in diamond</a>
 
         <div class="links about__links">
-            <a href="#" class="links__item" target="_blank">Our team</a>
+            <a href="http://www.heart-in-diamond.com/company/about.html" class="links__item" target="_blank">Our team</a>
             <span class="links__item links__item_separator">|</span>
-            <a href="#" class="links__item" target="_blank">Certified Partners</a>
+            <a href="http://www.heart-in-diamond.com/company/certified-partners.html" class="links__item" target="_blank">Certified Partners</a>
             <span class="links__item links__item_separator">|</span>
-            <a href="#" class="links__item" target="_blank">Guarantees</a>
+            <a href="http://www.heart-in-diamond.com/diamonds/authenticity-guarantee.html" class="links__item" target="_blank">Guarantees</a>
             <span class="links__item links__item_separator">|</span>
-            <a href="#" class="links__item" target="_blank">Select a Manufacturer</a>
+            <a href="http://www.heart-in-diamond.com/orders/how-to-select-manufacturer.html" class="links__item" target="_blank">Select a Manufacturer</a>
         </div>
     </div>
 </section>

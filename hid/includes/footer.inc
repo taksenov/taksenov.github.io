@@ -8,18 +8,18 @@
             </div>
         </div>
         <div class="social footer__social">
-            <a href="#" class="social__item social__item_blog">blog</a>
-            <a href="#" class="social__item social__item_fb"></a>
-            <a href="#" class="social__item social__item_tw"></a>
-            <a href="#" class="social__item social__item_gp"></a>
-            <a href="#" class="social__item social__item_pt"></a>
+            <a href="http://www.heart-in-diamond.com/news/" class="social__item social__item_blog" target="_blank">blog</a>
+            <a href="http://www.facebook.com/heartindiamonds" class="social__item social__item_fb" target="_blank"></a>
+            <a href="http://twitter.com/heartindiamond" class="social__item social__item_tw" target="_blank"></a>
+            <a href="https://plus.google.com/116284473400462216151" class="social__item social__item_gp" target="_blank"></a>
+            <a href="https://www.pinterest.com/heartindiamond/" class="social__item social__item_pt" target="_blank"></a>
         </div>
-        <a href="http://www.heart-in-diamond.com/index.php" class="footer__link">Check out our desktop version of the website!</a>
+        <a href="http://www.heart-in-diamond.com/index.php" class="footer__link" target="_blank">Check out our desktop version of the website!</a>
 
         <div class="footer__copyright">
-            <span>
-                Copyright &copy; Heart In&nbsp;Diamond 2016
-            </span>
+                        <span>
+                            Copyright &copy; Heart In&nbsp;Diamond 2016
+                        </span>
         </div>
     </div>
 </footer>
