@@ -4,7 +4,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -16,7 +16,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -28,7 +28,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -40,7 +40,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -53,7 +53,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -65,7 +65,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -77,7 +77,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -89,7 +89,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -101,7 +101,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -113,7 +113,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -128,7 +128,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -140,7 +140,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -152,7 +152,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -164,7 +164,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -177,7 +177,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -189,7 +189,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -201,7 +201,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -213,7 +213,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -225,7 +225,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -237,7 +237,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -252,7 +252,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -264,7 +264,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -276,7 +276,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -288,7 +288,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -301,7 +301,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -313,7 +313,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -325,7 +325,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -337,7 +337,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -349,7 +349,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
@@ -361,7 +361,7 @@
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
-            <div class="product__content-inner">
+            <div class="product__content-inner same-resize">
                 <h4 class="product__title">Halo 18K Yellow</h4>
                 <div class="product__price">$1937</div>
                 <a href="#" class="product__button">View More</a>
