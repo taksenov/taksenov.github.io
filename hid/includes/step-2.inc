@@ -15,8 +15,10 @@
                 <a href="#" class="filter__item" data-filter=".pendants">Browse PENDANTS</a>
             </div>
         </div>
-        <div class="products__list">
-            <? include('includes/rings.inc'); ?>
+        <div class="isotope">
+            <div class="products__list">
+                <? include('includes/rings.inc'); ?>
+            </div>
         </div>
     </div>
 </section>

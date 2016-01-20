@@ -296,102 +296,107 @@
         <div class="videos">
             <div class="title-underline">EXPLANATION VIDEOS</div>
             <div class="videos__zone">
-                <iframe class="videos__zone-frame" src="https://www.youtube.com/embed/s7z8P6iMf-E" frameborder="0" allowfullscreen></iframe>
+                <iframe class="videos__zone-frame" src="https://www.youtube.com/embed/s7z8P6iMf-E?version=3&loop=1&playlist=s7z8P6iMf-E&autoplay=0" frameborder="0" allowfullscreen></iframe>
             </div>
 
+            <!-- MIDDLE-LARGE-SCREENS -->
             <div class="videos__list hidden-sm hidden-xs">
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/s7z8P6iMf-E">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/s7z8P6iMf-E?version=3&loop=1&playlist=s7z8P6iMf-E&autoplay=1">
                     <div class="videos__item-picture videos__list--hidden-some-md" style="background-image: url(build/images/videos/blue.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Blue Round Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/81jIdy5IvG0?version=3&loop=1&playlist=81jIdy5IvG0&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/orange.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Orange Round Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/QiNefjm84MM">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/QiNefjm84MM?version=3&loop=1&playlist=QiNefjm84MM&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/red.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Red Round Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/DpTwKn87Btg?version=3&loop=1&playlist=DpTwKn87Btg&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/green.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Green Round Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw?version=3&loop=1&playlist=BF0kI3RQOdw&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/orange-p.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Orange Princess Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/rMEBJeaRmXw">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/rMEBJeaRmXw?version=3&loop=1&playlist=rMEBJeaRmXw&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/red-p.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Red Princess Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw?version=3&loop=1&playlist=3_qyGplcyXw&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/green-p.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">Green Princess Cut</div>
                 </div>
-                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/w7uWxetWspQ">
+                <div class="videos__item" data-action data-video="https://www.youtube.com/embed/w7uWxetWspQ?version=3&loop=1&playlist=w7uWxetWspQ&autoplay=1">
                     <div class="videos__item-picture" style="background-image: url(build/images/videos/white.jpg)">
                         <div class="videos__item-play"></div>
                     </div>
                     <div class="videos__item-label">White Round Cut</div>
                 </div>
             </div>
+            <!-- /MIDDLE-LARGE-SCREENS -->
 
+            <!-- XTRASMALL-SMALL-SCREENS -->
             <div class="videos-labels hidden-lg hidden-md">
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/s7z8P6iMf-E">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/s7z8P6iMf-E?version=3&loop=1&playlist=s7z8P6iMf-E&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Blue Round Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/81jIdy5IvG0?version=3&loop=1&playlist=81jIdy5IvG0&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Orange Round Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/QiNefjm84MM">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/QiNefjm84MM?version=3&loop=1&playlist=QiNefjm84MM&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Red Round Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/DpTwKn87Btg?version=3&loop=1&playlist=DpTwKn87Btg&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Green Round Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/BF0kI3RQOdw?version=3&loop=1&playlist=BF0kI3RQOdw&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Orange Princess Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/rMEBJeaRmXw">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/rMEBJeaRmXw?version=3&loop=1&playlist=rMEBJeaRmXw&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Red Princess Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/3_qyGplcyXw?version=3&loop=1&playlist=3_qyGplcyXw&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">Green Princess Cut</div>
                     </div>
                 </div>
-                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/w7uWxetWspQ">
+                <div class="videos-labels__item" data-action data-video="https://www.youtube.com/embed/w7uWxetWspQ?version=3&loop=1&playlist=w7uWxetWspQ&autoplay=1">
                     <div class="videos-labels__inner">
                         <div class="videos-labels__label">White Round Cut</div>
                     </div>
                 </div>
             </div>
+            <!-- /XTRASMALL-SMALL-SCREENS -->
+
         </div>
     </div>
 </section>

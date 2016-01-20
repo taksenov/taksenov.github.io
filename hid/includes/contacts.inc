@@ -32,10 +32,10 @@
 
             <div class="form__inner">
                 <div class="form__item">
-                    <input type="text" class="field" placeholder="NAME" name="name" required>
+                    <input type="text" class="field" name="name" placeholder="NAME" required>
                 </div>
                 <div class="form__item">
-                    <input type="tel" class="field" placeholder="TELEPHONE" name="phone">
+                    <input type="tel" class="field" name="phone" placeholder="TELEPHONE">
                 </div>
                 <div class="form__item">
                     <input type="email" class="field" name="email" placeholder="EMAIL" required>

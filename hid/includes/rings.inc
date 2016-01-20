@@ -1,6 +1,6 @@
 <!-- rings -->
 
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121570_1_y_bl.jpg);"></div>
         <div class="inner-content product__content">
@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/67547_1_w_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121681_1_y_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -36,7 +36,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121710_1_bl.jpg);"></div>
         <div class="inner-content product__content">
@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/140401L_1_gr.jpg);"></div>
         <div class="inner-content product__content">
@@ -60,7 +60,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/4929a_1_y_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -72,7 +72,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/150401_1_yw_bl.jpg);"></div>
         <div class="inner-content product__content">
@@ -84,7 +84,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/121602_1_bl.jpg);"></div>
         <div class="inner-content product__content">
@@ -96,7 +96,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/15720043_1w_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -108,7 +108,7 @@
         </div>
     </div>
 </div>
-<div class="rings product" data-category="post-transition">
+<div class="rings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/12598_1_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -123,7 +123,7 @@
 
 <!-- earrings -->
 
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/2983_1_y_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -135,7 +135,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/22137_1_w_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -147,7 +147,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/85033_1_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -159,7 +159,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/62867_1_gr.jpg);"></div>
         <div class="inner-content product__content">
@@ -172,7 +172,7 @@
     </div>
 </div>
 
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/66234_1_y_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -184,7 +184,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/84989_1_y_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -196,7 +196,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/66418_1_bl.jpg);"></div>
         <div class="inner-content product__content">
@@ -208,7 +208,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/61086_1_y_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -220,7 +220,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/20318_1_w_gr.jpg);"></div>
         <div class="inner-content product__content">
@@ -232,7 +232,7 @@
         </div>
     </div>
 </div>
-<div class="earrings product" data-category="post-transition">
+<div class="earrings product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/22137_1_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -247,7 +247,7 @@
 
 <!-- pendants -->
 
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/81487_1_gr.jpg);"></div>
         <div class="inner-content product__content">
@@ -259,7 +259,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/81537_1_y_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -271,7 +271,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/83534_1_y_or.jpg);"></div>
         <div class="inner-content product__content">
@@ -283,7 +283,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/83761_1_w_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -296,7 +296,7 @@
     </div>
 </div>
 
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/20934_1_w_wh.jpg);"></div>
         <div class="inner-content product__content">
@@ -308,7 +308,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/82206_1_gr.jpg);"></div>
         <div class="inner-content product__content">
@@ -320,7 +320,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/83127_1_w_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -332,7 +332,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/81990_1_w_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -344,7 +344,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/66744_1_re.jpg);"></div>
         <div class="inner-content product__content">
@@ -356,7 +356,7 @@
         </div>
     </div>
 </div>
-<div class="pendants product" data-category="post-transition">
+<div class="pendants product element-item" data-category="post-transition">
     <div class="element-item-inner product__inner">
         <div class="product__picture" style="background-image: url(http://www.heart-in-diamond.com/img/jewelry/20934_1_w_re.jpg);"></div>
         <div class="inner-content product__content">

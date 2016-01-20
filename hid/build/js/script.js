@@ -2597,512 +2597,472 @@ $.fn.videos = function(){
 
 };
 
-$(function(){
+    $(function(){
 
-	var $panel = app.dom.$root.find('.panel');
+        var $panel = app.dom.$root.find('.panel');
 
-	app.dom.$root.find('.slideshow').slideshow();
+        app.dom.$root.find('.slideshow').slideshow();
 
-	app.dom.$root.find('.header').sticky();
+        app.dom.$root.find('.header').sticky();
 
-	app.dom.$root.find('.checkbox').iCheck();
+        app.dom.$root.find('.checkbox').iCheck();
 
-	app.dom.$root.find('.products').products();
+        app.dom.$root.find('.products').products();
 
-	app.dom.$root.find('.videos').videos();
+        app.dom.$root.find('.videos').videos();
 
-	app.dom.$root.find('.panel').panel();
+        app.dom.$root.find('.panel').panel();
 
-	app.dom.$root.find('[data-step]').stepButton();
+        app.dom.$root.find('[data-step]').stepButton();
 
-	app.dom.$root.find('.header__button').on('click', function (e) {
-		$panel.data('panel').toggle();
-	});
+        app.dom.$root.find('.header__button').on('click', function (e) {
+            $panel.data('panel').toggle();
+        });
 
-	FastClick.notNeeded = function(){
-		return false;
-	};
+        FastClick.notNeeded = function(){
+            return false;
+        };
 
-	FastClick.attach(app.dom.$root[0]);
+        FastClick.attach(app.dom.$root[0]);
 
-	app.dom.$root.find('.nav, .panel').spy();
+        app.dom.$root.find('.nav, .panel').spy();
 
-	$.validator.addMethod("phoneUS", function(phone_number, element) {
-		phone_number = phone_number.replace(/\s+/g, "");
-		return this.optional(element) || phone_number.length > 9 &&
-			phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
-	}, "Please specify a valid phone number");
+        $.validator.addMethod("phoneUS", function(phone_number, element) {
+            phone_number = phone_number.replace(/\s+/g, "");
+            return this.optional(element) || phone_number.length > 9 &&
+                phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+        }, "Please specify a valid phone number");
 
-	app.dom.$root.find('.form__contacts').validate({
-		rules: {
-			'name': 'required',
-			'phone': {
-				phoneUS: true
-			},
-			'email': {
-				'email': true,
-				'required': true
-			},
-			'message': 'required'
+        app.dom.$root.find('.form__contacts').validate({
+            rules: {
+                'name': 'required',
+                'phone': {
+                    phoneUS: true
+                },
+                'email': {
+                    'email': true,
+                    'required': true
+                },
+                'message': 'required'
+            }
+        });
+
+        app.dom.$root.find('.form__contacts').on('submit', function() {
+            if ($(this).valid()) $(this).ajaxSubmit({
+                data: $(this).serialize(),
+                success: function(data){
+                    if(msg=='err') {
+                        $(this).find('.form__message').html('<p>Server error occurred.</p>');
+                    } else {
+                        $(this).find('.form__message').html('<p>Your subscription is in process. Thanks.</p>'); //hide button and show thank you
+                        this.reset();
+                    }
+                }
+            });
+            return false;
+        });
+
+        app.dom.$root.find('.intro__button').on('click', function(e) {
+            e.preventDefault();
+            var section = $(this).data('scroll-section'),
+                offset = (!app.device.isPhone) ? 100 : 80;
+
+            $('html, body').stop().animate({
+                scrollTop: $(section).offset().top - offset
+            }, 350, 'easeOutCirc');
+        });
+
+        function backgroundResize(){
+            var windowH = $(window).height();
+            $("[data-parallax]").each(function(i){
+                var path = $(this);
+                // variables
+                var contW = path.width();
+                var contH = path.height();
+                var imgW = path.attr("data-img-width");
+                var imgH = path.attr("data-img-height");
+                var ratio = imgW / imgH;
+                // overflowing difference
+                var diff = parseFloat(path.attr("data-diff"));
+                diff = diff ? diff : 0;
+                // remaining height to have fullscreen image only on parallax
+                var remainingH = 0;
+                if(path.hasClass("parallax")){
+                    var maxH = contH > windowH ? contH : windowH;
+                    remainingH = windowH - contH;
+                }
+                // set img values depending on cont
+                imgH = contH + remainingH + diff;
+                imgW = imgH * ratio;
+                // fix when too large
+                if(contW > imgW){
+                    imgW = contW;
+                    imgH = imgW / ratio;
+                }
+                //
+                path.data("resized-imgW", imgW);
+                path.data("resized-imgH", imgH);
+                path.css("background-size", imgW + "px " + imgH + "px");
+            });
+        }
+
+        if (!app.dom.$html.hasClass('m-touch')) {
+            $(window).resize(backgroundResize);
+            $(window).focus(backgroundResize);
+            backgroundResize();
+        }
+
+        function parallaxPosition(e){
+            var heightWindow = $(window).height();
+            var topWindow = $(window).scrollTop();
+            var bottomWindow = topWindow + heightWindow;
+            var currentWindow = (topWindow + bottomWindow) / 2;
+
+            $("[data-parallax]").each(function(i){
+                var path = $(this);
+                var height = path.height();
+                var top = path.offset().top;
+                var bottom = top + height;
+                // only when in range
+                if(bottomWindow > top && topWindow < bottom){
+                    var imgW = path.data("resized-imgW");
+                    var imgH = path.data("resized-imgH");
+                    // min when image touch top of window
+                    var min = 0;
+                    // max when image touch bottom of window
+                    var max = - imgH + heightWindow;
+                    // overflow changes parallax
+                    var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+                    top = top - overflowH;
+                    bottom = bottom + overflowH;
+                    // value with linear interpolation
+                    var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+                    // set background-position
+                    var orizontalPosition = path.attr("data-oriz-pos");
+                    orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+                    $(this).css("background-position", orizontalPosition + " " + value + "px");
+                }
+            });
+        }
+
+        if (!app.dom.$html.hasClass('m-touch')) {
+            $(window).resize(parallaxPosition);
+            $(window).scroll(parallaxPosition);
+            parallaxPosition();
+        }
+
+        app.dom.$root.find('[data-video-cap]').on('click', function() {
+
+            var _this = $(this),
+                $cap = _this.find('.step-three__video-cap'),
+                $video = _this.find('iframe');
+
+            $cap.hide();
+            $video.attr('src', _this.data('video'));
+        });
+
+        app.dom.$root.find('.step-three__video').embed();
+    });
+
+
+    // ip34 26-12-2015 support for parallax
+
+    $(document).ready(function(){
+
+        $(window).load(function() {
+
+            $('html').css('opacity', 1);
+
+            ringParent = $('.inner-content').height();
+            ringContent = $('.same-resize').height();
+            winConring = (ringParent / 2) - (ringContent / 2);
+            $('.same-resize').css('margin-top', winConring);
+
+            var header = $('.header');
+            var origOffsetY = header.offset().top;
+
+            function scroll() {
+                if ($(window).scrollTop() >= origOffsetY) {
+                    header.addClass('sticky-header');
+                    $('.content').addClass('menu-padding');
+                } else {
+                    header.removeClass('sticky-header');
+                    $('.content').removeClass('menu-padding');
+                }
+            }
+
+            document.onscroll = scroll;
+
+            $(".element-item").on("mouseover",function(){
+
+                var ringParent = $('.inner-content',this).height(),
+                    ringContent = $('.same-resize',this).height(),
+                    winConring = (ringParent / 2) - (ringContent / 2);
+
+                $('.same-resize',this).css('margin-top', winConring);
+
+            });
+
+        });
+
+
+    });
+
+
+    /* detect touch */
+    if("ontouchstart" in window){
+        document.documentElement.className = document.documentElement.className + " touch";
+    }
+    if(!$("html").hasClass("touch")){
+        /* background fix */
+        $(".parallax").css("background-attachment", "fixed");
+    }
+
+    /* fix vertical when not overflow
+     call fullscreenFix() if .fullscreen content changes */
+    function fullscreenFix(){
+        var h = $('body').height();
+        // set .fullscreen height
+        $(".content-b").each(function(i){
+            if($(this).innerHeight() <= h){
+                $(this).closest(".fullscreen").addClass("not-overflow");
+            }
+        });
+    }
+    $(window).resize(fullscreenFix);
+    fullscreenFix();
+
+    /* resize background images */
+    function backgroundResize(){
+        var windowH = $(window).height();
+        $(".background").each(function(i){
+            var path = $(this);
+            // variables
+            var contW = path.width();
+            var contH = path.height();
+            var imgW = path.attr("data-img-width");
+            var imgH = path.attr("data-img-height");
+            var ratio = imgW / imgH;
+            // overflowing difference
+            var diff = parseFloat(path.attr("data-diff"));
+            diff = diff ? diff : 0;
+            // remaining height to have fullscreen image only on parallax
+            var remainingH = 0;
+            if(path.hasClass("parallax") && !$("html").hasClass("touch")){
+                var maxH = contH > windowH ? contH : windowH;
+                remainingH = windowH - contH;
+            }
+            // set img values depending on cont
+            imgH = contH + remainingH + diff;
+            imgW = imgH * ratio;
+            // fix when too large
+            if(contW > imgW){
+                imgW = contW;
+                imgH = imgW / ratio;
+            }
+            //
+            path.data("resized-imgW", imgW);
+            path.data("resized-imgH", imgH);
+            path.css("background-size", imgW + "px " + imgH + "px");
+        });
+    }
+    $(window).resize(backgroundResize);
+    $(window).focus(backgroundResize);
+    backgroundResize();
+
+    /* set parallax background-position */
+    function parallaxPosition(e){
+        var heightWindow = $(window).height();
+        var topWindow = $(window).scrollTop();
+        var bottomWindow = topWindow + heightWindow;
+        var currentWindow = (topWindow + bottomWindow) / 2;
+        $(".parallax").each(function(i){
+            var path = $(this);
+            var height = path.height();
+            var top = path.offset().top;
+            var bottom = top + height;
+            // only when in range
+            if(bottomWindow > top && topWindow < bottom){
+                var imgW = path.data("resized-imgW");
+                var imgH = path.data("resized-imgH");
+                // min when image touch top of window
+                var min = 0;
+                // max when image touch bottom of window
+                var max = - imgH + heightWindow;
+                // overflow changes parallax
+                var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+                top = top - overflowH;
+                bottom = bottom + overflowH;
+                // value with linear interpolation
+                var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+                // set background-position
+                var orizontalPosition = path.attr("data-oriz-pos");
+                orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+                $(this).css("background-position", orizontalPosition + " " + value + "px");
+            }
+        });
+    }
+    if(!$("html").hasClass("touch")){
+        $(window).resize(parallaxPosition);
+        //$(window).focus(parallaxPosition);
+        $(window).scroll(parallaxPosition);
+        parallaxPosition();
+    }
+
+
+// ip34 adaptive for jewerly
+$(document).ready(function(){
+
+
+    var $container,
+    	$mobile_detector = $("#mobile-detector"),
+    	$items = $(".element-item"),
+    	allFilters = [ ".rings" , ".earrings" ,".pendants",".wear"],
+    	currentVisibileItems = null,
+    	currentFilter = "";
+
+    $.fn.preloadIsotopeImages = function(){
+
+    	return this.each(function(){
+
+    		var $item = $(this);
+    			//$img = $("img",$item);
+
+    		if( !$item.hasClass( "element-item-loaded" ) && !$item.hasClass( "element-item-loading" ) ){
+
+    			$item.addClass("element-item-loading");
+
+    			//$("<img/>").on("load",function(){
+    			//	$img.attr("src",this.src);
+    				$item.addClass("element-item-loaded").removeClass("element-item-loading");
+    			//}).attr("src", $img.data("src"));
+    		}
+    	});
+    };
+
+    var setVisibileItems = function( filterValue ){
+
+        console.log("Function setVisibileItems=", filterValue);
+
+    	if( !filterValue ) {filterValue = ".rings";}
+
+        console.log("Function setVisibileItems. If not filterValue=", filterValue);
+
+    	var visible_items_in_row;
+        var currentVisibileItems;
+
+        var doc_w = $(document).width();
+
+        if (doc_w <= 479) {
+            visible_items_in_row = 2;
+        } else if ( doc_w >= 480 && doc_w <= 1200 ) {
+            visible_items_in_row = 3
+        } else if ( doc_w >= 1201 ) {
+            visible_items_in_row = 5
+        }
+
+        console.log("Function setVisibileItems. doc_w=", doc_w);
+        console.log("Function setVisibileItems. visible_items_in_row=", visible_items_in_row);
+
+    	var total_visibile_items = visible_items_in_row * 2;
+
+        //total_visibile_items = 4;
+
+    	currentVisibileItems = total_visibile_items;
+
+		$items.removeClass("element-item-visible");
+
+        console.log("into function currentVisibileItems=", currentVisibileItems);
+
+		if( !filterValue ){
+
+	    	$.each( allFilters , function( index, filterValue ){
+	    		var count = Math.floor( total_visibile_items / allFilters.length ) + ( total_visibile_items  % 4 - index > 0 ? 1 : 0 );
+	    		$items.filter( filterValue ).slice( 0, count ).addClass(" element-item-visible");
+	    	});
+
+	    }
+	    else {
+	    	$items.filter( filterValue ).slice( 0, total_visibile_items ).addClass(" element-item-visible");
+	    }
+
+	    $items.filter(".element-item-visible").preloadIsotopeImages();
+
+        //$container.isotope({"filter":".element-item-visible"});
+
+        // цикл проходит по всем элементам с классом .hide
+        $('.element-item').each(function( index ){
+
+            var indexes = index + 1;
+
+            if ( indexes <= 10 && indexes > total_visibile_items ) {
+                $(this).css({"display":"none"});
+                console.log( "indexes=", indexes );
+            } else if ( (indexes > 10 && indexes <= 20) && indexes > total_visibile_items+10 ) {
+                $(this).hide();
+                console.log( "indexes=", indexes );
+            } else if ( (indexes > 20 && indexes <= 30) && indexes > total_visibile_items+20 ) {
+                $(this).hide();
+                console.log( "indexes=", indexes );
+            }
+        });
+
+
+    };
+
+    $(window).resize(function(){
+
+    	var currentVisibileCount =  $items.filter(".element-item-visible").length;
+
+    	setVisibileItems( currentFilter );
+
+		console.log("currentVisibileCount=", currentVisibileCount);
+
+    	if(  $items.filter(".element-item-visible").length !== currentVisibileCount ){
+
+		    try {
+		    	$container.isotope({"filter":".element-item-visible"});
+                console.log("Start isotope number 0");
+		    }  catch( e ){}
+
+		}
+    });
+
+    setVisibileItems();
+
+	$container = $('.isotope').isotope({
+		itemSelector: '.element-item',
+		layoutMode: 'fitRows',
+		filter: '.element-item-visible',
+		masonry: {
+			columnWidth: '.grid-sizer'
 		}
 	});
 
-	app.dom.$root.find('.form__contacts').on('submit', function() {
-		if ($(this).valid()) $(this).ajaxSubmit({
-			data: $(this).serialize(),
-			success: function(data){
-				if(msg=='err') {
-					$(this).find('.form__message').html('<p>Server error occurred.</p>');
-				} else {
-					$(this).find('.form__message').html('<p>Your subscription is in process. Thanks.</p>'); //hide button and show thank you
-					this.reset();
-				}
-			}
-		});
-		return false;
+
+	$container.isotope( 'on', 'arrangeComplete', function(){
+		setTimeout(function(){ $(window).trigger('resize').trigger('scroll'); }, 10 );
 	});
 
-	app.dom.$root.find('.intro__button').on('click', function(e) {
-		e.preventDefault();
-		var section = $(this).data('scroll-section'),
-			offset = (!app.device.isPhone) ? 100 : 80;
+	// bind filter button click
+	$('#filters').on( 'click', 'a', function() {
+		var filterValue = $( this ).attr('data-filter');
 
-		$('html, body').stop().animate({
-			scrollTop: $(section).offset().top - offset
-		}, 350, 'easeOutCirc');
+        console.log("Start DATA-FILTER");
+
+		setVisibileItems( filterValue );
+
+		currentFilter = filterValue;
+
+	    try {
+	    	$container.isotope({"filter":".element-item-visible"});
+            console.log("Start isotope number 1");
+	    }  catch( e ){}
+
 	});
 
-	function backgroundResize(){
-		var windowH = $(window).height();
-		$("[data-parallax]").each(function(i){
-			var path = $(this);
-			// variables
-			var contW = path.width();
-			var contH = path.height();
-			var imgW = path.attr("data-img-width");
-			var imgH = path.attr("data-img-height");
-			var ratio = imgW / imgH;
-			// overflowing difference
-			var diff = parseFloat(path.attr("data-diff"));
-			diff = diff ? diff : 0;
-			// remaining height to have fullscreen image only on parallax
-			var remainingH = 0;
-			if(path.hasClass("parallax")){
-				var maxH = contH > windowH ? contH : windowH;
-				remainingH = windowH - contH;
-			}
-			// set img values depending on cont
-			imgH = contH + remainingH + diff;
-			imgW = imgH * ratio;
-			// fix when too large
-			if(contW > imgW){
-				imgW = contW;
-				imgH = imgW / ratio;
-			}
-			//
-			path.data("resized-imgW", imgW);
-			path.data("resized-imgH", imgH);
-			path.css("background-size", imgW + "px " + imgH + "px");
-		});
-	}
 
-	if (!app.dom.$html.hasClass('m-touch')) {
-		$(window).resize(backgroundResize);
-		$(window).focus(backgroundResize);
-		backgroundResize();
-	}
-
-	function parallaxPosition(e){
-		var heightWindow = $(window).height();
-		var topWindow = $(window).scrollTop();
-		var bottomWindow = topWindow + heightWindow;
-		var currentWindow = (topWindow + bottomWindow) / 2;
-
-		$("[data-parallax]").each(function(i){
-			var path = $(this);
-			var height = path.height();
-			var top = path.offset().top;
-			var bottom = top + height;
-			// only when in range
-			if(bottomWindow > top && topWindow < bottom){
-				var imgW = path.data("resized-imgW");
-				var imgH = path.data("resized-imgH");
-				// min when image touch top of window
-				var min = 0;
-				// max when image touch bottom of window
-				var max = - imgH + heightWindow;
-				// overflow changes parallax
-				var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
-				top = top - overflowH;
-				bottom = bottom + overflowH;
-				// value with linear interpolation
-				var value = min + (max - min) * (currentWindow - top) / (bottom - top);
-				// set background-position
-				var orizontalPosition = path.attr("data-oriz-pos");
-				orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
-				$(this).css("background-position", orizontalPosition + " " + value + "px");
-			}
-		});
-	}
-
-	if (!app.dom.$html.hasClass('m-touch')) {
-		$(window).resize(parallaxPosition);
-		$(window).scroll(parallaxPosition);
-		parallaxPosition();
-	}
-
-	app.dom.$root.find('[data-video-cap]').on('click', function() {
-
-		var _this = $(this),
-			$cap = _this.find('.step-three__video-cap'),
-			$video = _this.find('iframe');
-
-		$cap.hide();
-		$video.attr('src', _this.data('video'));
-	});
-
-	app.dom.$root.find('.step-three__video').embed();
 });
-
-
-// taksenov 26-12-2015 support for parallax 
-
-	    $(document).ready(function(){
-
-
-	    	// $("#mySlider").zmSlider( { 'responsive':[[1, 100]] } );
-
-		    // $('#slides').superslides({
-		    //   animation: 'fade',
-		    //   play: 5000,
-		    //   pagination: false
-		    // });
-
-			// $(window).resize(function(){
-
-		 //    	winHeight = $(window).height();
-		 //    	winContent = $('.content').height();
-		 //    	winConMarginTop = (winHeight / 2) - (winContent / 2);
-		 //    	$('.content').css('margin-top', winConMarginTop);
-		 //    	$('.slider-section').height(winHeight);
-		    	
-
-		 //    }).trigger("resize");
-
-
-		    //$("nav a").click(function(e){
-		    //
-		    //    if($(this).hasClass('blog')){
-		    //    	e.stopPropagation();
-		    //    }
-		    //    else{
-		    //    	e.preventDefault();
-			 //       var target = this.hash;
-			 //       var asdf = $("section"+target);
-			 //       $('html,body').animate({
-			 //         scrollTop: asdf.offset().top
-			 //       }, 1000);
-            //
-				//	if($(document).width()<=768){
-				//		$('header nav ul').slideToggle();
-				//		$('#nav-toggle').toggleClass('active');
-				//	}
-		    //    }
-            //
-            //
-            //
-		    //});
-
-
-
-
-
-			$(window).load(function() {
-
-			    $('html').css('opacity', 1);
-
-		    	ringParent = $('.inner-content').height();
-		    	ringContent = $('.same-resize').height();    	
-		    	winConring = (ringParent / 2) - (ringContent / 2);
-		    	$('.same-resize').css('margin-top', winConring);
-
-			    var header = $('.header');
-			    var origOffsetY = header.offset().top;
-
-			    function scroll() {
-			        if ($(window).scrollTop() >= origOffsetY) {
-			            header.addClass('sticky-header');
-			            $('.content').addClass('menu-padding');
-			        } else {
-			            header.removeClass('sticky-header');
-			            $('.content').removeClass('menu-padding');
-			        }
-			    }
-
-			    document.onscroll = scroll;
-
-			    $(".element-item").on("mouseover",function(){
-			    	
-		    		var ringParent = $('.inner-content',this).height(),
-		    			ringContent = $('.same-resize',this).height(),   	
-		    			winConring = (ringParent / 2) - (ringContent / 2);
-
-		    		$('.same-resize',this).css('margin-top', winConring);
-
-			    });
-
-			});
-
-
-	    });
-
-
-		/* detect touch */
-		if("ontouchstart" in window){
-		    document.documentElement.className = document.documentElement.className + " touch";
-		}
-		if(!$("html").hasClass("touch")){
-		    /* background fix */
-		    $(".parallax").css("background-attachment", "fixed");
-		}
-
-		/* fix vertical when not overflow
-		call fullscreenFix() if .fullscreen content changes */
-		function fullscreenFix(){
-		    var h = $('body').height();
-		    // set .fullscreen height
-		    $(".content-b").each(function(i){
-		        if($(this).innerHeight() <= h){
-		            $(this).closest(".fullscreen").addClass("not-overflow");
-		        }
-		    });
-		}
-		$(window).resize(fullscreenFix);
-		fullscreenFix();
-
-		/* resize background images */
-		function backgroundResize(){
-		    var windowH = $(window).height();
-		    $(".background").each(function(i){
-		        var path = $(this);
-		        // variables
-		        var contW = path.width();
-		        var contH = path.height();
-		        var imgW = path.attr("data-img-width");
-		        var imgH = path.attr("data-img-height");
-		        var ratio = imgW / imgH;
-		        // overflowing difference
-		        var diff = parseFloat(path.attr("data-diff"));
-		        diff = diff ? diff : 0;
-		        // remaining height to have fullscreen image only on parallax
-		        var remainingH = 0;
-		        if(path.hasClass("parallax") && !$("html").hasClass("touch")){
-		            var maxH = contH > windowH ? contH : windowH;
-		            remainingH = windowH - contH;
-		        }
-		        // set img values depending on cont
-		        imgH = contH + remainingH + diff;
-		        imgW = imgH * ratio;
-		        // fix when too large
-		        if(contW > imgW){
-		            imgW = contW;
-		            imgH = imgW / ratio;
-		        }
-		        //
-		        path.data("resized-imgW", imgW);
-		        path.data("resized-imgH", imgH);
-		        path.css("background-size", imgW + "px " + imgH + "px");
-		    });
-		}
-		$(window).resize(backgroundResize);
-		$(window).focus(backgroundResize);
-		backgroundResize();
-
-		/* set parallax background-position */
-		function parallaxPosition(e){
-		    var heightWindow = $(window).height();
-		    var topWindow = $(window).scrollTop();
-		    var bottomWindow = topWindow + heightWindow;
-		    var currentWindow = (topWindow + bottomWindow) / 2;
-		    $(".parallax").each(function(i){
-		        var path = $(this);
-		        var height = path.height();
-		        var top = path.offset().top;
-		        var bottom = top + height;
-		        // only when in range
-		        if(bottomWindow > top && topWindow < bottom){
-		            var imgW = path.data("resized-imgW");
-		            var imgH = path.data("resized-imgH");
-		            // min when image touch top of window
-		            var min = 0;
-		            // max when image touch bottom of window
-		            var max = - imgH + heightWindow;
-		            // overflow changes parallax
-		            var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
-		            top = top - overflowH;
-		            bottom = bottom + overflowH;
-		            // value with linear interpolation
-		            var value = min + (max - min) * (currentWindow - top) / (bottom - top);
-		            // set background-position
-		            var orizontalPosition = path.attr("data-oriz-pos");
-		            orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
-		            $(this).css("background-position", orizontalPosition + " " + value + "px");
-		        }
-		    });
-		}
-		if(!$("html").hasClass("touch")){
-		    $(window).resize(parallaxPosition);
-		    //$(window).focus(parallaxPosition);
-		    $(window).scroll(parallaxPosition);
-		    parallaxPosition();
-		}
-
-		// if(window.location.hash) {
-
-
-		// 	var form = $(".form-one");
-		// 	var form2 = $(".form-two");
-		// 	var button = $(".form-one-button");
-		// 	var button2 = $(".form-two-button");			
-			
-
-		// 	if (form.hasClass("active")) {
-
-		// 		form.toggleClass("active");
-		// 		form2.toggleClass("active");
-		// 	};
-
-
-		// 	if (button.hasClass("active")) {
-
-		// 		button.toggleClass("active");
-		// 		button2.toggleClass("active");
-		// 	};
-
-		// }
-
-// 		$(document).ready(function () {
-
-// 		    $('#contact-form').validate({
-// 		        rules: {
-// 		            f1n: {
-// 		                minlength: 2,
-// 		                required: true
-// 		            },
-// 		            f1e: {
-// 		                required: true,
-// 		                email: true
-// 		            }
-// 		        },
-// 		        highlight: function (element) {
-// 		            $(element).closest('.control-group').removeClass('success').addClass('error');
-// 		        },
-// 		        success: function (element) {
-// 		            element.text('').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
-// 		        },
-// 		        submitHandler: function(form) {
-
-// 			$("#contact-form .button").val('Sending...');
-// 			$("#contact-form .button").attr('disabled',true);
-// 			$("#thanks").html('');
-//                 $.ajax({
-//                     type: "POST",
-//                     url: "/cgi-bin/subscribe_rsp.cgi", //process to mail
-//                     data: $('#contact-form').serialize(),
-//                     success: function(msg){
-//  			if(msg=='err') {
-//                          $("#thanks").html('<p>Server error occurred.</p>');
-// 			} else {
-//                          $("#thanks").html('<p>Your subscription is in process. Thanks.</p>'); //hide button and show thank you
-//                          $( '#contact-form' ).each(function(){
-//                           this.reset();
-//                          });     
-// 			}
-// ////                        setTimeout(function () { $("#thanks").html(''); }, 8000);
-//                     },complete: function(){
-//                         $("#contact-form .button").val('SEND');
-//                         $("#contact-form label").css('display', 'none');
-// 			$("#contact-form .button").attr('disabled',false);
-//                     },error: function(){
-//                          $("#thanks").html('<p>Connection error occurred. Please try again.</p>');
-//                     }
-//                 });
-
-
-// 		        }
-
-// 		    });	    
-
-// 		});
-
-
-		// $(document).ready(function () {
-
-		//     $('#contact-form2').validate({
-		//         rules: {
-		//             f2n: {
-		//                 minlength: 2,
-		//                 required: true
-		//             },
-		//             f2e: {
-		//                 required: true,
-		//                 email: true
-		//             },
-	 //            	    f2m: {
-	 //                	minlength: 2,
-	 //                	required: true
-	 //            	    }
-		//         },
-		//         highlight: function (element) {
-		//             $(element).closest('.control-group').removeClass('success').addClass('error');
-		//         },
-		//         success: function (element) {
-		//             element.text('').addClass('valid').closest('.control-group').removeClass('error').addClass('success');
-		//         },
-		//         submitHandler: function(form) {
-
-		// 	$("#contact-form2 .button").val('Sending...');
-		// 	$("#contact-form2 .button").attr('disabled',true);
-		// 	$("#thanks2").html('');
-
-  //               $.ajax({
-  //                   type: "POST",
-  //                   url: "/cgi-bin/send_rsp.cgi", //process to mail
-  //                   data: $('#contact-form2').serialize(),
-  //                   success: function(msg){
- 	// 		if(msg=='err') {
-  //                        $("#thanks2").html('<p>Server error occurred.</p>');
-		// 	} else {
-  //                        $("#thanks2").html('<p>Your message has been sent. Thanks.</p>'); //hide button and show thank you
-  //                        $( '#contact-form2' ).each(function(){
-  //                         this.reset();
-  //                        });     
-		// 	}
-  //                   },complete: function(){
-  //                       $("#contact-form2 .button").val('SEND');
-  //                       $("#contact-form2 label").css('display', 'none');
-		// 	$("#contact-form2 .button").attr('disabled',false);
-  //                   },error: function(){
-  //                        $("#thanks2").html('<p>Connection error occurred. Please try again.</p>');
-  //                   }
-                    
-  //               });
-
-
-
-		//         }
-
-		//     });	    
-
-		// });
-
-
-
-
-
-
-
-
 
 
 
