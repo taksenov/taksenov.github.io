@@ -3160,6 +3160,9 @@ $(document).ready(function() {
                 });
             }
 
+            console.log("product__title=", $(".product__title").outerHeight(true) );
+            console.log("product__price=", $(".product__price").outerHeight(true));
+
 
         },
          // -- инициализация при загрузке js
