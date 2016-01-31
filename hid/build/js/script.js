@@ -2806,7 +2806,8 @@ $.fn.videos = function(){
             //$('.slider-section').height(winHeight);
 
             if ( controlHeight > 0 ) {
-                var controlPercent = ( ( controlHeight * 100 ) / winHeight ) - 100;
+                //var controlPercent = ( ( controlHeight * 100 ) / winHeight ) - 100;
+                var controlPercent = ( ( winHeight * 100 ) / controlHeight ) - 100;
 
                 console.log( "controlPercent=", controlPercent );
 
