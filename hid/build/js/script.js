@@ -2676,7 +2676,7 @@ $.fn.videos = function(){
                 scrollTop: $(section).offset().top - offset
             }, 350, 'easeOutCirc');
 
-            console.log("event N 5000 + ");
+            //console.log("event N 5000 + ");
 
         });
 
@@ -2712,7 +2712,7 @@ $.fn.videos = function(){
                 path.data("resized-imgH", imgH);
                 path.css("background-size", imgW + "px " + imgH + "px");
 
-                console.log("event N 4000 backgroundResize + ");
+                //console.log("event N 4000 backgroundResize + ");
 
             });
         }
@@ -2722,7 +2722,7 @@ $.fn.videos = function(){
             $(window).focus(backgroundResize);
             backgroundResize();
 
-            console.log("event N 3000 ");
+            //console.log("event N 3000 ");
 
         }
 
@@ -2810,7 +2810,7 @@ $.fn.videos = function(){
                 var controlPercent =  Math.abs( ( ( winHeight * 100 ) / controlHeight ) - 100 );
                 //controlPercent = Math.abs( controlPercent );
 
-                console.log( "controlPercent=", controlPercent );
+                //console.log( "controlPercent=", controlPercent );
 
                 if ( controlPercent > 25 ) {
                     controlHeight = winHeight;
@@ -2832,9 +2832,9 @@ $.fn.videos = function(){
 
 
 
-            console.log("event N 0010 window resize + ");
-            console.log("winHeight= ", winHeight);
-            console.log("$('.slider-section').height(winHeight) === ", $('.slider-section').height(winHeight) );
+            //console.log("event N 0010 window resize + ");
+            //console.log("winHeight= ", winHeight);
+            //console.log("$('.slider-section').height(winHeight) === ", $('.slider-section').height(winHeight) );
 
         }).trigger("resize");
 
@@ -2854,7 +2854,7 @@ $.fn.videos = function(){
                     $('.content').removeClass('menu-padding');
                 }
 
-                console.log("event N 0001 scroll() ");
+                //console.log("event N 0001 scroll() ");
 
             }
 
@@ -2868,7 +2868,7 @@ $.fn.videos = function(){
 
                 $('.same-resize',this).css('margin-top', winConring);
 
-                console.log("event N 0002 ");
+                //console.log("event N 0002 ");
 
             });
 
@@ -2882,14 +2882,14 @@ $.fn.videos = function(){
     if("ontouchstart" in window){
         document.documentElement.className = document.documentElement.className + " touch";
 
-        console.log("event N 0003 ");
+        //console.log("event N 0003 ");
 
     }
     if(!$("html").hasClass("touch")){
         /* background fix */
         $(".parallax").css("background-attachment", "fixed");
 
-        console.log("event N 0004 detect touch ");
+        //console.log("event N 0004 detect touch ");
 
     }
 
@@ -2904,7 +2904,7 @@ $.fn.videos = function(){
             }
         });
 
-        console.log("event N 0005 fullscreenFix ");
+        //console.log("event N 0005 fullscreenFix ");
 
     }
     $(window).resize(fullscreenFix);
@@ -2981,15 +2981,15 @@ $.fn.videos = function(){
                 orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
                 $(this).css("background-position", orizontalPosition + " " + value + "px");
 
-                console.log("event N 0008 parallaxPosition ");
-                console.log("heightWindow=", heightWindow);
-                console.log("$('.slider-section').height()=", $('.slider-section').height());
+                //console.log("event N 0008 parallaxPosition ");
+                //console.log("heightWindow=", heightWindow);
+                //console.log("$('.slider-section').height()=", $('.slider-section').height());
 
             }
 
-            console.log("event N 0007 parallaxPosition ");
-            console.log("heightWindow=", heightWindow);
-            console.log("$('.slider-section').height()=", $('.slider-section').height());
+            //console.log("event N 0007 parallaxPosition ");
+            //console.log("heightWindow=", heightWindow);
+            //console.log("$('.slider-section').height()=", $('.slider-section').height());
 
         });
     }
@@ -2999,7 +2999,7 @@ $.fn.videos = function(){
         $(window).scroll(parallaxPosition);
         parallaxPosition();
 
-        console.log("event N 0009 ");
+        //console.log("event N 0009 ");
 
     }
 
