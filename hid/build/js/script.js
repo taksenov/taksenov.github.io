@@ -2814,7 +2814,9 @@ $.fn.videos = function(){
                 if ( controlPercent > 25 ) {
                     controlHeight = winHeight;
                     $('.slider-section').height(winHeight);
+                    controlPercent = 0;
                 } else {
+                    controlPercent = 0;
                     return;
                 }
 
