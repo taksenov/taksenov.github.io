@@ -2599,172 +2599,172 @@ $.fn.videos = function(){
 
 };
 
-    $(function(){
-
-        var $panel = app.dom.$root.find('.panel');
-
-        app.dom.$root.find('.slideshow').slideshow();
-
-        app.dom.$root.find('.header').sticky();
-
-        app.dom.$root.find('.checkbox').iCheck();
-
-        app.dom.$root.find('.products').products();
-
-        app.dom.$root.find('.videos').videos();
-
-        app.dom.$root.find('.panel').panel();
-
-        app.dom.$root.find('[data-step]').stepButton();
-
-        app.dom.$root.find('.header__button').on('click', function (e) {
-            $panel.data('panel').toggle();
-        });
-
-        FastClick.notNeeded = function(){
-            return false;
-        };
-
-        FastClick.attach(app.dom.$root[0]);
-
-        app.dom.$root.find('.nav, .panel').spy();
-
-        $.validator.addMethod("phoneUS", function(phone_number, element) {
-            phone_number = phone_number.replace(/\s+/g, "");
-            return this.optional(element) || phone_number.length > 9 &&
-                phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
-        }, "Please specify a valid phone number");
-
-        app.dom.$root.find('.form__contacts').validate({
-            rules: {
-                'name': 'required',
-                'phone': {
-                    phoneUS: true
-                },
-                'email': {
-                    'email': true,
-                    'required': true
-                },
-                'message': 'required'
-            }
-        });
-
-        app.dom.$root.find('.form__contacts').on('submit', function() {
-            if ($(this).valid()) $(this).ajaxSubmit({
-                data: $(this).serialize(),
-                success: function(data){
-                    if(msg=='err') {
-                        $(this).find('.form__message').html('<p>Server error occurred.</p>');
-                    } else {
-                        $(this).find('.form__message').html('<p>Your subscription is in process. Thanks.</p>'); //hide button and show thank you
-                        this.reset();
-                    }
-                }
-            });
-            return false;
-        });
-
-        app.dom.$root.find('.intro__button').on('click', function(e) {
-            e.preventDefault();
-            var section = $(this).data('scroll-section'),
-                offset = (!app.device.isPhone) ? 100 : 80;
-
-            $('html, body').stop().animate({
-                scrollTop: $(section).offset().top - offset
-            }, 350, 'easeOutCirc');
-        });
-
-        function backgroundResize(){
-            var windowH = $(window).height();
-            $("[data-parallax]").each(function(i){
-                var path = $(this);
-                // variables
-                var contW = path.width();
-                var contH = path.height();
-                var imgW = path.attr("data-img-width");
-                var imgH = path.attr("data-img-height");
-                var ratio = imgW / imgH;
-                // overflowing difference
-                var diff = parseFloat(path.attr("data-diff"));
-                diff = diff ? diff : 0;
-                // remaining height to have fullscreen image only on parallax
-                var remainingH = 0;
-                if(path.hasClass("parallax")){
-                    var maxH = contH > windowH ? contH : windowH;
-                    remainingH = windowH - contH;
-                }
-                // set img values depending on cont
-                imgH = contH + remainingH + diff;
-                imgW = imgH * ratio;
-                // fix when too large
-                if(contW > imgW){
-                    imgW = contW;
-                    imgH = imgW / ratio;
-                }
-                //
-                path.data("resized-imgW", imgW);
-                path.data("resized-imgH", imgH);
-                path.css("background-size", imgW + "px " + imgH + "px");
-            });
-        }
-
-        if (!app.dom.$html.hasClass('m-touch')) {
-            $(window).resize(backgroundResize);
-            $(window).focus(backgroundResize);
-            backgroundResize();
-        }
-
-        function parallaxPosition(e){
-            var heightWindow = $(window).height();
-            var topWindow = $(window).scrollTop();
-            var bottomWindow = topWindow + heightWindow;
-            var currentWindow = (topWindow + bottomWindow) / 2;
-
-            $("[data-parallax]").each(function(i){
-                var path = $(this);
-                var height = path.height();
-                var top = path.offset().top;
-                var bottom = top + height;
-                // only when in range
-                if(bottomWindow > top && topWindow < bottom){
-                    var imgW = path.data("resized-imgW");
-                    var imgH = path.data("resized-imgH");
-                    // min when image touch top of window
-                    var min = 0;
-                    // max when image touch bottom of window
-                    var max = - imgH + heightWindow;
-                    // overflow changes parallax
-                    var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
-                    top = top - overflowH;
-                    bottom = bottom + overflowH;
-                    // value with linear interpolation
-                    var value = min + (max - min) * (currentWindow - top) / (bottom - top);
-                    // set background-position
-                    var orizontalPosition = path.attr("data-oriz-pos");
-                    orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
-                    $(this).css("background-position", orizontalPosition + " " + value + "px");
-                }
-            });
-        }
-
-        if (!app.dom.$html.hasClass('m-touch')) {
-            $(window).resize(parallaxPosition);
-            $(window).scroll(parallaxPosition);
-            parallaxPosition();
-        }
-
-        app.dom.$root.find('[data-video-cap]').on('click', function() {
-
-            var _this = $(this),
-                $cap = _this.find('.step-three__video-cap'),
-                $video = _this.find('iframe');
-
-            $cap.hide();
-            $video.attr('src', _this.data('video'));
-        });
-
-        app.dom.$root.find('.step-three__video').embed();
-    });
+    //$(function(){
+    //
+    //    var $panel = app.dom.$root.find('.panel');
+    //
+    //    app.dom.$root.find('.slideshow').slideshow();
+    //
+    //    app.dom.$root.find('.header').sticky();
+    //
+    //    app.dom.$root.find('.checkbox').iCheck();
+    //
+    //    app.dom.$root.find('.products').products();
+    //
+    //    app.dom.$root.find('.videos').videos();
+    //
+    //    app.dom.$root.find('.panel').panel();
+    //
+    //    app.dom.$root.find('[data-step]').stepButton();
+    //
+    //    app.dom.$root.find('.header__button').on('click', function (e) {
+    //        $panel.data('panel').toggle();
+    //    });
+    //
+    //    FastClick.notNeeded = function(){
+    //        return false;
+    //    };
+    //
+    //    FastClick.attach(app.dom.$root[0]);
+    //
+    //    app.dom.$root.find('.nav, .panel').spy();
+    //
+    //    $.validator.addMethod("phoneUS", function(phone_number, element) {
+    //        phone_number = phone_number.replace(/\s+/g, "");
+    //        return this.optional(element) || phone_number.length > 9 &&
+    //            phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+    //    }, "Please specify a valid phone number");
+    //
+    //    app.dom.$root.find('.form__contacts').validate({
+    //        rules: {
+    //            'name': 'required',
+    //            'phone': {
+    //                phoneUS: true
+    //            },
+    //            'email': {
+    //                'email': true,
+    //                'required': true
+    //            },
+    //            'message': 'required'
+    //        }
+    //    });
+    //
+    //    app.dom.$root.find('.form__contacts').on('submit', function() {
+    //        if ($(this).valid()) $(this).ajaxSubmit({
+    //            data: $(this).serialize(),
+    //            success: function(data){
+    //                if(msg=='err') {
+    //                    $(this).find('.form__message').html('<p>Server error occurred.</p>');
+    //                } else {
+    //                    $(this).find('.form__message').html('<p>Your subscription is in process. Thanks.</p>'); //hide button and show thank you
+    //                    this.reset();
+    //                }
+    //            }
+    //        });
+    //        return false;
+    //    });
+    //
+    //    app.dom.$root.find('.intro__button').on('click', function(e) {
+    //        e.preventDefault();
+    //        var section = $(this).data('scroll-section'),
+    //            offset = (!app.device.isPhone) ? 100 : 80;
+    //
+    //        $('html, body').stop().animate({
+    //            scrollTop: $(section).offset().top - offset
+    //        }, 350, 'easeOutCirc');
+    //    });
+    //
+    //    function backgroundResize(){
+    //        var windowH = $(window).height();
+    //        $("[data-parallax]").each(function(i){
+    //            var path = $(this);
+    //            // variables
+    //            var contW = path.width();
+    //            var contH = path.height();
+    //            var imgW = path.attr("data-img-width");
+    //            var imgH = path.attr("data-img-height");
+    //            var ratio = imgW / imgH;
+    //            // overflowing difference
+    //            var diff = parseFloat(path.attr("data-diff"));
+    //            diff = diff ? diff : 0;
+    //            // remaining height to have fullscreen image only on parallax
+    //            var remainingH = 0;
+    //            if(path.hasClass("parallax")){
+    //                var maxH = contH > windowH ? contH : windowH;
+    //                remainingH = windowH - contH;
+    //            }
+    //            // set img values depending on cont
+    //            imgH = contH + remainingH + diff;
+    //            imgW = imgH * ratio;
+    //            // fix when too large
+    //            if(contW > imgW){
+    //                imgW = contW;
+    //                imgH = imgW / ratio;
+    //            }
+    //            //
+    //            path.data("resized-imgW", imgW);
+    //            path.data("resized-imgH", imgH);
+    //            path.css("background-size", imgW + "px " + imgH + "px");
+    //        });
+    //    }
+    //
+    //    if (!app.dom.$html.hasClass('m-touch')) {
+    //        $(window).resize(backgroundResize);
+    //        $(window).focus(backgroundResize);
+    //        backgroundResize();
+    //    }
+    //
+    //    function parallaxPosition(e){
+    //        var heightWindow = $(window).height();
+    //        var topWindow = $(window).scrollTop();
+    //        var bottomWindow = topWindow + heightWindow;
+    //        var currentWindow = (topWindow + bottomWindow) / 2;
+    //
+    //        $("[data-parallax]").each(function(i){
+    //            var path = $(this);
+    //            var height = path.height();
+    //            var top = path.offset().top;
+    //            var bottom = top + height;
+    //            // only when in range
+    //            if(bottomWindow > top && topWindow < bottom){
+    //                var imgW = path.data("resized-imgW");
+    //                var imgH = path.data("resized-imgH");
+    //                // min when image touch top of window
+    //                var min = 0;
+    //                // max when image touch bottom of window
+    //                var max = - imgH + heightWindow;
+    //                // overflow changes parallax
+    //                var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+    //                top = top - overflowH;
+    //                bottom = bottom + overflowH;
+    //                // value with linear interpolation
+    //                var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+    //                // set background-position
+    //                var orizontalPosition = path.attr("data-oriz-pos");
+    //                orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+    //                $(this).css("background-position", orizontalPosition + " " + value + "px");
+    //            }
+    //        });
+    //    }
+    //
+    //    if (!app.dom.$html.hasClass('m-touch')) {
+    //        $(window).resize(parallaxPosition);
+    //        $(window).scroll(parallaxPosition);
+    //        parallaxPosition();
+    //    }
+    //
+    //    app.dom.$root.find('[data-video-cap]').on('click', function() {
+    //
+    //        var _this = $(this),
+    //            $cap = _this.find('.step-three__video-cap'),
+    //            $video = _this.find('iframe');
+    //
+    //        $cap.hide();
+    //        $video.attr('src', _this.data('video'));
+    //    });
+    //
+    //    app.dom.$root.find('.step-three__video').embed();
+    //});
 
 
     // ip34 26-12-2015 support for parallax
