@@ -2803,6 +2803,8 @@ $.fn.videos = function(){
             $('.slider-section').height(winHeight);
 
             console.log("event N 0010 window resize + ");
+            console.log("winHeight= ", winHeight);
+            console.log("$('.slider-section').height(winHeight) === ", $('.slider-section').height(winHeight) );
 
         }).trigger("resize");
 
