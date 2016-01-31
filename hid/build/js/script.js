@@ -2802,17 +2802,19 @@ $.fn.videos = function(){
 
             var winContent = $('.content').height();
             var winConMarginTop = (winHeight / 2) - (winContent / 2);
-            $('.content').css('margin-top', winConMarginTop);
+
             //$('.slider-section').height(winHeight);
 
             if ( controlHeight > 0 ) {
                 //var controlPercent = ( ( controlHeight * 100 ) / winHeight ) - 100;
-                var controlPercent = ( ( winHeight * 100 ) / controlHeight ) - 100;
+                var controlPercent =  Math.abs( ( ( winHeight * 100 ) / controlHeight ) - 100 );
+                //controlPercent = Math.abs( controlPercent );
 
                 console.log( "controlPercent=", controlPercent );
 
                 if ( controlPercent > 25 ) {
                     controlHeight = winHeight;
+                    $('.content').css('margin-top', winConMarginTop);
                     $('.slider-section').height(winHeight);
                     controlPercent = 0;
                 } else {
@@ -2822,6 +2824,7 @@ $.fn.videos = function(){
 
             } else if ( controlHeight === 0 ) {
                 controlHeight = winHeight;
+                $('.content').css('margin-top', winConMarginTop);
                 $('.slider-section').height(winHeight);
             }
 
