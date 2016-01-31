@@ -2789,6 +2789,8 @@ $.fn.videos = function(){
 
     $(document).ready(function(){
 
+        var controlHeight = 0;
+
         $('#slides').superslides({
             animation: 'fade',
             play: 5000,
@@ -2797,10 +2799,32 @@ $.fn.videos = function(){
 
         $(window).resize(function(){
             var winHeight = $(window).height();
+
             var winContent = $('.content').height();
             var winConMarginTop = (winHeight / 2) - (winContent / 2);
             $('.content').css('margin-top', winConMarginTop);
-            $('.slider-section').height(winHeight);
+            //$('.slider-section').height(winHeight);
+
+            if ( controlHeight > 0 ) {
+                var controlPercent = ( ( controlHeight * 100 ) / winHeight ) - 100;
+
+                console.log( "controlPercent=", controlPercent );
+
+                if ( controlPercent > 25 ) {
+                    controlHeight = winHeight;
+                    $('.slider-section').height(winHeight);
+                } else {
+                    return;
+                }
+
+            } else if ( controlHeight === 0 ) {
+                controlHeight = winHeight;
+                $('.slider-section').height(winHeight);
+            }
+
+
+
+
 
             console.log("event N 0010 window resize + ");
             console.log("winHeight= ", winHeight);
