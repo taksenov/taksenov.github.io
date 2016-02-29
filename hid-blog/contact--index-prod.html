@@ -29,6 +29,8 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- /Fonts -->
 
     <link rel="stylesheet" href="css/vendor.css">
@@ -38,7 +40,7 @@
 
 
     <!-- LESS на продакшене закомментировать -->
-    <link  href="less/main.less" rel="stylesheet/less" type="text/css">
+    <!--<link  href="less/main.less" rel="stylesheet/less" type="text/css">-->
 
 </head>
 
@@ -72,20 +74,41 @@
 
                 <div class="container">
                     <div class="row">
+
+                        <!-- MIDDLE-LARGE-SCREENS -->
                         <div class="col-md-2 hidden-xs hidden-sm">
                             <!-- header-left start -->
                             <!-- ================ -->
                             <div class="header-left clearfix">
 
                                 <!-- logo -->
-                                <div id="" class="">
+                                <div class="">
                                     <a href="http://heart-in-diamond.com/" class="logo"><img id="logo_img" src="img/logo.svg" alt="Heart In Diamond"></a>
                                 </div>
 
                             </div>
                             <!-- header-left end -->
-
                         </div>
+                        <!-- /MIDDLE-LARGE-SCREENS -->
+
+                        <!-- XTRASMALL-SMALL-SCREENS -->
+                        <div class="col-md-12 hidden-md hidden-lg">
+                            <!-- header-left start -->
+                            <!-- ================ -->
+                            <div class=" clearfix">
+
+                                <!-- logo -->
+                                <div class="">
+                                    <a href="http://heart-in-diamond.com/" class="logo center-block">
+                                        <img src="img/logo.svg" alt="Heart In Diamond">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header-left end -->
+                        </div>
+                        <!-- /XTRASMALL-SMALL-SCREENS -->
+
                         <div class="col-md-10">
 
                             <!-- header-right start -->
@@ -117,47 +140,51 @@
                                             </div>
 
                                             <!-- Collect the nav links, forms, and other content for toggling -->
-                                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                            <div class="collapse navbar-collapse navbar__align_center" id="navbar-collapse-1">
                                                 <!-- main-menu -->
-                                                <ul class="nav navbar-nav ">
+                                                <div class="navbar__align_center_to_left">
+                                                    <div class="navbar__align_center_to_right">
+                                                        <ul class="nav navbar-nav ">
 
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Home</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item blg-nav__item--active">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Blog</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">About</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Process</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Prices</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Contact</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="blg-nav__item">
-                                                        <a href="#" class="blg-nav__link">
-                                                            <span class="blg-nav__text">Testimonials</span>
-                                                        </a>
-                                                    </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Home</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item blg-nav__item--active">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Blog</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">About</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Process</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Prices</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Contact</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="blg-nav__item">
+                                                                <a href="#" class="blg-nav__link">
+                                                                    <span class="blg-nav__text">Testimonials</span>
+                                                                </a>
+                                                            </li>
 
-                                                </ul>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                                 <!-- main-menu end -->
 
                                             </div>
@@ -432,8 +459,6 @@
         </div>
         <!-- banner end -->
 
-        <!--<div id="page-start"></div>-->
-
         <!-- main-container start -->
         <!-- ================ -->
         <section class="main-container">
@@ -447,160 +472,79 @@
 
                         <!-- page-title start -->
                         <!-- ================ -->
-                        <h1 class="page-title">Home Blog</h1>
+                        <h1 class="page-title">Contact Us</h1>
                         <div class="separator-2"></div>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
                         <!-- page-title end -->
+                        <h2>Ready to Order or Need More Time to Think it Over?</h2>
 
-                        <!-- blogpost start -->
-                        <article class="blogpost">
-                            <div class="overlay-container">
-                                <img src="img/post-testimonial--1.jpg" alt="">
-                                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
-                            </div>
-                            <header>
-                                <h2><a href="blog-post.html">Cute Robot</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="day">08</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="fa fa-user"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="fa fa-comments"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="fa fa-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="fa fa-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
+                        <p>
+                            Complete the contact form below or
+                            Call us at: &nbsp;&nbsp;<strong>+1 888 471 4715</strong>&nbsp;&nbsp; 8am - 6pm (EST) Mon-Fri.
+                            Receive Your Free Information Kit, Free Consultation, and Special 5% Discount or Order Now by clicking the appropriate box below:
+                        </p>
 
-                        <!-- blogpost start -->
-                        <article class="blogpost">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s7z8P6iMf-E?version=3&loop=1&playlist=s7z8P6iMf-E&autoplay=0&showinfo=0"></iframe>
-                            </div>
-                            <header>
-                                <h2><a href="blog-post.html">Blogpost with embedded youtube video</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="day">11</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="fa fa-user"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="fa fa-comments"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="fa fa-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="fa fa-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
+                        <!-- Forms start -->
+                        <!-- ============================================================================== -->
+                        <br>
 
-                        <!-- blogpost start -->
-                        <article class="blogpost">
-                            <header>
-                                <h2><a href="blog-post.html">Text Post</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="day">09</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="fa fa-user"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="fa fa-comments"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="fa fa-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="fa fa-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
+                        <div class="separator-2"></div>
 
-                        <!-- blogpost start -->
-                        <article class="blogpost">
-                            <div class="overlay-container">
-                                <img src="img/post-testimonial--2.jpg" alt="">
-                                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+                        <form role="form" action="" method="get">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="check_1" id="check-1">
+                                    I’m ready to order now, I know what I want. I’d like a consultant to contact me
+                                </label>
                             </div>
-                            <header>
-                                <h2><a href="blog-post.html">Cute Robot</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="day">08</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="fa fa-user"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="fa fa-comments"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="check_2" id="check-2">
+                                    Yes, I want my FREE Information Kit (includes brochure, FAQ guide, purchase order form, and material collection kit)
+                                </label>
                             </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="fa fa-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="fa fa-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="check_3" id="check-3">
+                                    Yes, I want a kind and caring rep to answer questions and give me my FREE consultation
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" name="check_4" id="check-4">
+                                    Yes, I want to subscribe to your newsletter and get my FREE 5% discount
+                                </label>
+                            </div>
+                            <br>
 
-                        <!-- blogpost start -->
-                        <article class="blogpost">
-                            <div class="overlay-container">
-                                <img src="img/post-testimonial--3.jpg" alt="">
-                                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
+                            <div class="form-group">
+                                <label for="InputEmail1">Name</label>
+                                <input type="text" class="form-control" id="InputEmail1" name="hidn" placeholder="NAME" required>
                             </div>
-                            <header>
-                                <h2><a href="blog-post.html">Cute Robot</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="fa fa-calendar"></i>
-                                        <span class="day">08</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="fa fa-user"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="fa fa-comments"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Mauris dolor sapien, malesuada at interdum ut, hendrerit eget lorem. Nunc interdum mi neque, et  sollicitudin purus fermentum ut. Suspendisse faucibus nibh odio, a vehicula eros pharetra in. Maecenas  ullamcorper commodo rutrum. In iaculis lectus vel augue eleifend dignissim. Aenean viverra semper sollicitudin.</p>
+                            <div class="form-group">
+                                <label for="InputPassword1">Telephone</label>
+                                <input type="tel" class="form-control" id="InputPassword1" name="phone" placeholder="TELEPHONE">
                             </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="fa fa-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="fa fa-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
+                            <div class="form-group">
+                                <label for="InputPassword1">E-mail</label>
+                                <input type="email" class="form-control" id="InputPassword1_" name="hidem" placeholder="EMAIL" required>
+                                <input type="hidden" name="source" value="hidcom">
+                                <input type="hidden" name="version" value="hidf">
+                            </div>
 
-                        <!-- pagination start -->
-                        <nav>
-                            <ul class="pagination">
-                                <li><a href="#" aria-label="Previous"><i class="fa fa-angle-left"></i></a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#" aria-label="Next"><i class="fa fa-angle-right"></i></a></li>
-                            </ul>
-                        </nav>
-                        <!-- pagination end -->
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea class="form-control" rows="5" name="message" placeholder="YOUR MESSAGE" required></textarea>
+                            </div>
 
+                            <button type="submit" class="btn btn-default">Submit</button>
+
+
+                            <div class="form__message form__message--red-text"></div>
+
+                        </form>
+                        <br>
+                        <br>
                     </div>
                     <!-- main end -->
 
@@ -824,7 +768,7 @@
                                             </a>
                                         </li>
                                         <li class="subfooter__contact_element">
-                                            <a href="mailto:info@theproject.com" class="subfooter__sendmessage_link">
+                                            <a href="#" class="subfooter__sendmessage_link">
                                                 <i class="fa fa-envelope pr-10 subfooter__icon"></i>Click to send a message
                                             </a>
                                         </li>
@@ -846,7 +790,7 @@
                                             </a>
                                         </li>
                                         <li class="subfooter__contact_element">
-                                            <a href="mailto:info@theproject.com" class="subfooter__sendmessage_link">
+                                            <a href="#" class="subfooter__sendmessage_link">
                                                 <i class="fa fa-envelope pr-10 subfooter__icon"></i>Click to send a message
                                             </a>
                                         </li>
@@ -907,8 +851,6 @@
     </div>
     <!-- page-wrapper end -->
 
-
-
     <script src="js/vendor.js"></script>
 
 
@@ -916,7 +858,7 @@
 
     <!-- Не забудь подключить сюда less.js -->
     <!-- а на продакшене закомментировать -->
-    <script src="bower_components/less/dist/less.js"></script>
+    <!--<script src="bower_components/less/dist/less.js"></script>-->
 
 </body>
 </html>
