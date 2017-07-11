@@ -1,0 +1,17 @@
+.new_background {
+    background-color: orange;
+}
+
+.inner_block {
+    border: 0.1rem solid black;
+    margin-bottom: 0.4rem;
+    padding-left: 0.4rem;
+    padding-top: 0.4rem;
+}
+
+.header_block {
+    margin-top: 0.5rem;
+    margin-bottom: : 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}

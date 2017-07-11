@@ -1,0 +1,8 @@
+.new_background {
+    background-color: orange;
+}
+
+.inner_block {
+    border: 0.1rem solid black;
+    margin-bottom: 0.4rem;
+}
